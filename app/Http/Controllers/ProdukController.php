@@ -58,7 +58,9 @@ class ProdukController extends Controller
      */
     public function show($id)
     {
-        //
+        $produks = Produk::findOrFail($id);
+
+        return view('show', compact('produks'));
     }
 
     /**

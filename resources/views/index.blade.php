@@ -37,11 +37,12 @@
             <td>{{$produk->harga}}</td>
             <td>{{$produk->jumlah}}</td>
             <td><a href="{{ route('produk.edit', $produk->id)}}" class="btn btn-primary">Edit</a></td>
+            <td><a href="{{ route('produk.show', $produk->id)}}" class="btn btn-success">Lihat</a></td>
             <td>
                 <form action="{{ route('produk.destroy', $produk->id)}}" method="post">
                   @csrf
                   @method('DELETE')
-                  <button class="btn btn-danger" type="submit">Delete</button>
+                  <button class="btn btn-danger" type="submit">Hapus</button>
                 </form>
             </td>
         </tr>
